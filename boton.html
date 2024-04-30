@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Event Driven</title>
+</head>
+<body>
+  <h1>Ejemplo Event Driven</h1>
+  <button id="boton1">Click me</button>
+  <p id="etq1">Hola</p>
+  <p id="etq2">Hola</p>
+  <p id="etq3">Hola</p>
+  <button id="boton2">Next</button>
+  <script>
+    boton1.addEventListener('click', function() {
+      etq1.textContent = '¡Has hecho clic!' ;
+      etq3.textContent = '¡Has hecho clic!';
+    });
+
+    boton2.addEventListener('click', function() {
+      etq2.textContent = '¡Has hecho clic en el boton 2!';
+      etq3.textContent = '¡Has hecho clic en el boton 2!';
+    });
+
+    etq1.addEventListener('click',function(){
+      etq3.textContent = '¡Has hecho clic en la etiqueta 1!';
+    });
+ </script>
+</body>
+</html>
